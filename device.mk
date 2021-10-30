@@ -60,4 +60,5 @@ TARGET_KERNEL_VERSION := 4.19
 
 # Overlays
 PRODUCT_PACKAGES += \
-    LimeFrameworks
+    LimeFrameworks \
+    LimeSystemUI

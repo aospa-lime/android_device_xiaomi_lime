@@ -57,3 +57,7 @@ TARGET_COMMON_QTI_COMPONENTS := $(QTI_COMPONENTS)
 
 # Default kernel revision
 TARGET_KERNEL_VERSION := 4.19
+
+# Overlays
+PRODUCT_PACKAGES += \
+    LimeFrameworks

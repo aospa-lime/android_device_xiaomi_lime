@@ -103,7 +103,7 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-service
 
 # Init
-PRODUCT_COPY_FILES += $(LOCAL_PATH)/init/default/fstab.default:$(TARGET_COPY_OUT_RAMDISK)/fstab.default
+PRODUCT_COPY_FILES += $(LOCAL_PATH)/init/fstab.default:$(TARGET_COPY_OUT_RAMDISK)/fstab.default
 
 PRODUCT_PACKAGES += \
     fstab.default \

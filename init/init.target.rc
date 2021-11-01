@@ -207,24 +207,6 @@ service vendor.mdm_helper /vendor/bin/mdm_helper
     group system wakelock
     disabled
 
-service audioshell_service /vendor/bin/audioshell_service
-    oneshot
-    disabled
-
-on property:ro.vendor.miui.region=*
-    start audioshell_service
-
-# add PcbaConfigSet by tanrong
-service PcbaConfigSet /system/vendor/bin/PcbaConfigSet
-    class core
-    user root
-    group root system vendor_qti_diag
-    oneshot
-    seclabel u:r:PcbaConfigSet:s0
-
-on boot
-    start PcbaConfigSet
-
 on property:sys.boot.hwc=*
     setprop ro.boot.hwc ${sys.boot.hwc}
 on property:sys.boot.cpuid=*
@@ -254,68 +236,6 @@ service vendor.cnss_diag /system/vendor/bin/cnss_diag -q -t HELIUM
    group system wifi inet sdcard_rw media_rw diag
    oneshot
 
-#xiong add charge_logger
-service charge_logger vendor/bin/charge_logger
-   class late_start
-   user system
-   group system system wakelock
-   disabled
-   oneshot    
-
-on property:sys.boot_completed=1
-   start charge_logger
-
-#xiong add charge_logger
-on property:sys.boot_completed=1
-   chmod 0666 /data/vendor/charge_logger/charge_logger_a.csv
-   chmod 0666 /data/vendor/charge_logger/charge_logger_b.csv
-
-#xiong add scancode
-#add for scancode_bin by jiangxueqin_20200820_start
-service scancode /vendor/bin/scancode_bin
-    class core
-    user root
-    group root
-    oneshot
-    seclabel u:r:shell:s0
-
-service maxcurrent_nocall /vendor/bin/scancode_bin m 0
-    user root
-    oneshot
-    seclabel u:r:shell:s0
-    disabled
-on property:sys.m.incall=0
-    start maxcurrent_nocall
-
-service maxcurrent_incall /vendor/bin/scancode_bin m 1
-    user root
-    oneshot
-    seclabel u:r:shell:s0
-    disabled
-on property:sys.m.incall=1
-    start maxcurrent_incall
-#add for scancode_bin by jiangxueqin_20200820_end
-
-service wbrf_service /system/bin/wbrf_bin
-    class main
-    socket myguard stream 0660 system system
-    disabled
-
-service wbrf_service2 /vendor/bin/wbrf_bin2
-    class main
-    socket myguard2 stream 0660 system system
-    disabled
-
-########### FTM begin ##########
-########### FTM begin ##########
-########### FTM begin ##########
-## add for ap diag begin
-service hwdiag system/bin/hwdiag
-    class core
-    user root
-    seclabel u:r:diag_test:s0
-## add for ap diag end
-
 # dual bokeh
 on property:vendor.camera.bokeh.disable=1
     setprop persist.vendor.camera.bokeh.preview 1
@@ -325,7 +245,6 @@ on property:vendor.camera.bokeh.disable=0
 
 
 on boot
-    start hwdiag
     chown root root /sys/class/huaqin/interface/hw_info/lcm
     chmod 0666 /sys/class/huaqin/interface/hw_info/lcm
     chown root root /sys/class/graphics/fb0/msm_fb_wpoint
@@ -371,22 +290,3 @@ service dcvs-sh /vendor/bin/init.qti.dcvs.sh
 on property:vendor.dcvs.prop=1
    start dcvs-sh
 
-service panel_color /vendor/bin/panelcolor_bin
-    class main
-    user root
-    oneshot
-    disabled
-
-on property:sys.boot_completed=1
-    start panel_color
-
-########### FTM end ##########
-########### FTM end ##########
-########### FTM end ##########
-
-service checknv /system/bin/checknv
-    class main
-    user root
-    group root system
-    oneshot
-    seclabel u:r:checknv:s0

@@ -152,10 +152,6 @@ QTI_COMPONENTS += wfd
 QTI_COMPONENTS += wlan
 TARGET_COMMON_QTI_COMPONENTS := $(QTI_COMPONENTS)
 
-# Recovery
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.recovery.ui.margin_height=150
-
 # Enable advanced network scanning.
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.enableadvancedscan=true

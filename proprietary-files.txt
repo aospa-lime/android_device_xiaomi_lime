@@ -418,6 +418,7 @@ vendor/lib/libcapiv2vop.so
 vendor/lib/libcom.qti.chinodeutils.so
 vendor/lib/libmibokeh_712.so
 vendor/lib/libmpbase.so
+vendor/lib/libofflinelog.so
 vendor/lib/libswvdec.so
 vendor/lib/libvideoutils.so
 vendor/lib/libvidhance.so
@@ -573,6 +574,7 @@ vendor/lib64/libcom.qti.chinodeutils.so
 vendor/lib64/libmialgoengine.so
 vendor/lib64/libmibokeh_712.so
 vendor/lib64/libmpbase.so
+vendor/lib64/libofflinelog.so
 vendor/lib64/libswregistrationalgo.so
 vendor/lib64/libswvdec.so
 vendor/lib64/libvidhance.so

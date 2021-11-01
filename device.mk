@@ -25,7 +25,8 @@ PRODUCT_SOONG_NAMESPACES += \
 # Board
 TARGET_BOARD_PLATFORM := bengal
 
-# Default kernel revision
+# Kernel
+KERNEL_SD_LLVM_SUPPORT := true
 TARGET_KERNEL_VERSION := 4.19
 
 # Shipping API

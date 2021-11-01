@@ -111,7 +111,4 @@ ALL_DEFAULT_INSTALLED_MODULES += \
     $(RFS_MDM_SLPI_SYMLINKS) \
     $(RFS_MDM_TN_SYMLINKS)
 
-# WLAN
-include device/qcom/wlan/bengal/AndroidBoardWlan.mk
-
 endif

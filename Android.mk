@@ -101,6 +101,10 @@ $(RFS_MDM_TN_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	$(hide) ln -sf /mnt/vendor/persist/hlos_rfs/shared $@/hlos
 	$(hide) ln -sf /vendor/firmware_mnt $@/readonly/firmware
 
+WLAN_FW_SYMLINKS := $(TARGET_OUT_VENDOR)/firmware/wlan/qca_cld
+$(WLAN_FW_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	$(hide) ln -sf /mnt/vendor/persist/wlan_mac.bin $@/wlan_mac.bin
+
 ALL_DEFAULT_INSTALLED_MODULES += \
     $(CNE_SYMLINKS) \
     $(EGL_32_SYMLINKS) \
@@ -109,6 +113,7 @@ ALL_DEFAULT_INSTALLED_MODULES += \
     $(RFS_MDM_CDSP_SYMLINKS) \
     $(RFS_MDM_MPSS_SYMLINKS) \
     $(RFS_MDM_SLPI_SYMLINKS) \
-    $(RFS_MDM_TN_SYMLINKS)
+    $(RFS_MDM_TN_SYMLINKS) \
+    $(WLAN_FW_SYMLINKS)
 
 endif

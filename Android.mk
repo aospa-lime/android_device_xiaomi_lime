@@ -20,9 +20,6 @@ include $(call all-makefiles-under, $(LOCAL_PATH))
 
 include $(CLEAR_VARS)
 
-# Common
-include vendor/qcom/opensource/core-utils/build/AndroidBoardCommon.mk
-
 # Symlinks
 CNE_SYMLINKS := $(TARGET_OUT_VENDOR_APPS)/CneApp/lib/arm64/
 $(CNE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)

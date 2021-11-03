@@ -155,14 +155,6 @@ vendor/lib64/vendor.qti.voiceprint@1.0.so
 
 # Audio - MIUI
 vendor/etc/acdbdata/adsp_avs_config.acdb
-vendor/etc/acdbdata/IDP/bengal-scubaidp-snd-card/IDP_Scuba_Bluetooth_cal.acdb
-vendor/etc/acdbdata/IDP/bengal-scubaidp-snd-card/IDP_Scuba_General_cal.acdb
-vendor/etc/acdbdata/IDP/bengal-scubaidp-snd-card/IDP_Scuba_Global_cal.acdb
-vendor/etc/acdbdata/IDP/bengal-scubaidp-snd-card/IDP_Scuba_Handset_cal.acdb
-vendor/etc/acdbdata/IDP/bengal-scubaidp-snd-card/IDP_Scuba_Hdmi_cal.acdb
-vendor/etc/acdbdata/IDP/bengal-scubaidp-snd-card/IDP_Scuba_Headset_cal.acdb
-vendor/etc/acdbdata/IDP/bengal-scubaidp-snd-card/IDP_Scuba_Speaker_cal.acdb
-vendor/etc/acdbdata/IDP/bengal-scubaidp-snd-card/IDP_Scuba_workspaceFile.qwsp
 vendor/etc/acdbdata/IDP/IDP_Bluetooth_cal.acdb
 vendor/etc/acdbdata/IDP/IDP_General_cal.acdb
 vendor/etc/acdbdata/IDP/IDP_Global_cal.acdb
@@ -196,6 +188,10 @@ vendor/firmware/aw87359_dspk.bin
 vendor/firmware/aw87519_drcv.bin
 vendor/firmware/aw87519_hvload.bin
 vendor/firmware/aw87519_kspk.bin
+
+# AudioHalExtension - MIUI
+vendor/lib/hw/vendor.qti.hardware.audiohalext@1.0-impl.so
+vendor/lib64/hw/vendor.qti.hardware.audiohalext@1.0-impl.so
 
 # Bluetooth - MIUI
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti

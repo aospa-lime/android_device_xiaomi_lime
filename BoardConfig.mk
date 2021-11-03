@@ -114,9 +114,6 @@ DEVICE_MATRIX_FILE += $(DEVICE_PATH)/configs/vintf/compatibility_matrix.xml
 # Hacks
 BUILD_BROKEN_DUP_RULES := true
 
-# RIL
-ENABLE_VENDOR_RIL_SERVICE := true
-
 # Recovery
 BOARD_INCLUDE_RECOVERY_DTBO := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/fstab.default

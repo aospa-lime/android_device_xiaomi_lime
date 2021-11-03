@@ -582,6 +582,10 @@ vendor/lib64/lib_lowlight.so
 vendor/lib64/libalhLDC.so
 vendor/lib64/libalLDC.so
 
+# Camera-bitml - MIUI
+vendor/lib/libbitmlengine.so
+vendor/lib64/libbitmlengine.so
+
 # Camera-arcsoft - MIUI
 vendor/lib/libarcsoft_beautyshot.so
 vendor/lib64/libarcsoft_beautyshot.so

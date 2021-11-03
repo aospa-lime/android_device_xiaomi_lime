@@ -128,5 +128,3 @@ BOARD_SEPOLICY_DIRS += \
 # VNDK
 BOARD_VNDK_VERSION := current
 
-# WLAN
-include device/qcom/wlan/bengal/BoardConfigWlan.mk

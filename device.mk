@@ -117,6 +117,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.crypto.volume.filenames_mode="aes-256-cts" \
     ro.hardware.keystore_desede=true
 
+# Neural networks
+PRODUCT_PACKAGES += \
+    android.hardware.neuralnetworks@1.3.vendor
+
 # Overlays
 PRODUCT_PACKAGES += \
     LimeFrameworks \

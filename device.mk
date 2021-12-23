@@ -113,6 +113,10 @@ PRODUCT_PACKAGES += \
     init.qcom.dcvs.sh
 
 # Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.1 \
+    android.hardware.keymaster@4.1.vendor
+
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.crypto.volume.filenames_mode="aes-256-cts" \
     ro.hardware.keystore_desede=true

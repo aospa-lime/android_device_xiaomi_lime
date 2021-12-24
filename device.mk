@@ -135,7 +135,8 @@ PRODUCT_PACKAGES += \
 # Overlays
 PRODUCT_PACKAGES += \
     LimeFrameworks \
-    LimeSystemUI
+    LimeSystemUI \
+    WifiResTarget
 
 # PASR HAL
 PRODUCT_PROPERTY_OVERRIDES += \

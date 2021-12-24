@@ -69,7 +69,11 @@ BOARD_BOOTIMG_HEADER_VERSION := 2
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 
 # DTBO
-BOARD_KERNEL_SEPARATED_DTBO := true
+BOARD_KERNEL_SEPARATED_DTBO := false
+
+# Prebuilts for DTB and DTBO [DNM - wait for source release by Xiaomi Inc.]
+TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb.img
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true

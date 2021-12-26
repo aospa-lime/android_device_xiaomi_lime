@@ -170,6 +170,7 @@ vendor/etc/audio_io_policy.conf
 vendor/etc/audio_platform_info_intcodec.xml
 vendor/etc/audio_policy_configuration.xml
 vendor/etc/mixer_paths.xml
+vendor/etc/mixer_paths_idp.xml
 vendor/etc/sound_trigger_mixer_paths.xml
 vendor/etc/sound_trigger_platform_info.xml
 vendor/lib/libacdb-fts.so
@@ -394,6 +395,11 @@ vendor/lib/hw/com.qti.chi.override.so
 vendor/lib/libalhLDC.so
 vendor/lib/libalLDC.so
 vendor/lib/libc++_shared.so
+vendor/lib/libchilog.so
+vendor/lib/libwa_dof.so
+vendor/lib/libwapi_cert.so
+vendor/lib/libwa_refocus.so
+vendor/lib/libwa_rtdof.so
 vendor/lib/libcamerapostproc.so
 vendor/lib/libcamera_nn_stub.so
 vendor/lib/libcamera_scene.so
@@ -548,6 +554,11 @@ vendor/lib64/camera/fdconfigvideo.bin
 vendor/lib64/camera/fdconfigvideolite.bin
 vendor/lib64/hw/camera.qcom.so
 vendor/lib64/hw/com.qti.chi.override.so
+vendor/lib64/libchilog.so
+vendor/lib64/libwa_dof.so
+vendor/lib64/libwapi_cert.so
+vendor/lib64/libwa_refocus.so
+vendor/lib64/libwa_rtdof.so
 vendor/lib64/libc++_shared.so
 vendor/lib64/libcamerapostproc.so
 vendor/lib64/libcamera_nn_stub.so

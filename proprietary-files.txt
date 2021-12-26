@@ -899,6 +899,9 @@ vendor/lib64/libqtikeymaster4.so
 # Latency - MIUI
 vendor/lib64/vendor.qti.hardware.data.latency@1.0.so
 
+# Media - MIUI
+vendor/etc/system_properties.xml
+
 # MDM - MIUI
 vendor/bin/ks
 

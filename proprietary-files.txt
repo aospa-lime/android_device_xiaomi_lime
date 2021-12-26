@@ -152,7 +152,7 @@ vendor/lib64/libqtigef.so
 vendor/lib64/libstagefright_soft_qtiflacdec.so
 vendor/lib64/vendor.qti.voiceprint@1.0.so
 
-# Audio - MIUI
+# Audio-ACDB - MIUI
 vendor/etc/acdbdata/adsp_avs_config.acdb
 vendor/etc/acdbdata/IDP/IDP_Bluetooth_cal.acdb
 vendor/etc/acdbdata/IDP/IDP_General_cal.acdb
@@ -165,6 +165,8 @@ vendor/etc/acdbdata/IDP/IDP_workspaceFile.qwsp
 vendor/etc/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__eai_1.00.pmd
 vendor/etc/acdbdata/nn_ns_models/fai__2.2.0_0.1__3.0.0_0.0__eai_1.00.pmd
 vendor/etc/acdbdata/nn_vad_models/fai_3.0.0_0.0_eai_1.00.pmd
+
+# Audio-Configs - MIUI
 vendor/etc/audio_effects.xml
 vendor/etc/audio_io_policy.conf
 vendor/etc/audio_platform_info_intcodec.xml
@@ -173,14 +175,20 @@ vendor/etc/mixer_paths.xml
 vendor/etc/mixer_paths_idp.xml
 vendor/etc/sound_trigger_mixer_paths.xml
 vendor/etc/sound_trigger_platform_info.xml
+
+# ACDB-Loader - MIUI
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbloader.so
 vendor/lib/libacdbrtac.so
 vendor/lib64/libacdb-fts.so
 vendor/lib64/libacdbloader.so
 vendor/lib64/libacdbrtac.so
+
+# Audio-aptX - MIUI
 vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDAD_Speech_Decoder.so
 vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDADV_Encoder.so
+
+# Audio-Firmware - MIUI
 vendor/firmware/aw87359_abrcv.bin
 vendor/firmware/aw87359_abspk.bin
 vendor/firmware/aw87359_drcv.bin

@@ -44,6 +44,11 @@ PRODUCT_PACKAGES += android.hardware.fastboot@1.0-impl-mock
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.device_id_attestation.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.device_id_attestation.xml
 
+# Audio
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.audio.button_jack.profile=volume \
+    persist.vendor.audio.button_jack.switch=0
+
 # Biometrics
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.biometrics.face.xml \

@@ -84,7 +84,6 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-service_64 \
     libcamera2ndk_vendor \
     libstdc++.vendor \
-    libgui_vendor \
     vendor.qti.hardware.camera.device@1.0.vendor \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
@@ -222,6 +221,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_EXTRA_VNDK_VERSIONS := 30
 
 # WLAN
+PRODUCT_PACKAGES += libwpa_client
+
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.aware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.aware.xml
 

@@ -644,6 +644,8 @@ vendor/etc/camera/model/bokeh_model/segment_model
 vendor/etc/camera/model/rt_model/cache_data
 vendor/etc/camera/model/rt_model/model_mdl_cache
 vendor/etc/camera/model/rt_model/segment_model
+vendor/etc/camera/mibokeh_712_opencl.bin
+vendor/etc/camera/mibokeh_712_parameter.bin
 vendor/etc/camera/morpho_lowlight5.0_algoup.xml
 vendor/etc/camera/vidhance_calibration
 vendor/etc/camera/watermark_font_2300_3199.dat

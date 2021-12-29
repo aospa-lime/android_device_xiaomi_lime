@@ -149,7 +149,8 @@ PRODUCT_PACKAGES += \
 
 # PASR HAL
 PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.power.pasr.enabled=true
+    vendor.power.pasr.enabled=true \
+    vendor.pasr.activemode.enabled=true
 
 # Public Libraries
 PRODUCT_COPY_FILES += \

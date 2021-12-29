@@ -1,4 +1,4 @@
-# ADSPRPC - MIUI
+# ADSPRPC - from LA.UM.9.15.r1-02200-KAMORTA.0
 vendor/bin/adsprpcd
 vendor/bin/cdsprpcd
 vendor/bin/dspservice

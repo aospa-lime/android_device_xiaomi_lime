@@ -175,6 +175,10 @@ QTI_COMPONENTS += wfd
 QTI_COMPONENTS += wlan
 TARGET_COMMON_QTI_COMPONENTS := $(QTI_COMPONENTS)
 
+# QTI Trusted UI
+PRODUCT_PACKAGES += \
+    android.hidl.memory.block@1.0.vendor \
+
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.dbg.volte_avail_ovr=1 \

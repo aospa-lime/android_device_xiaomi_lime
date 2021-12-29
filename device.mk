@@ -217,6 +217,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.servicetracker@1.2.vendor
 
+# Snapdragon Vision
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.display.svi=1 \
+    ro.vendor.display.sensortype=2 \
+    vendor.display.svi.config=1 \
+    vendor.display.svi.config_path=/vendor/etc/SVIConfig.xml
+
 # Treble
 PRODUCT_FULL_TREBLE_OVERRIDE := true
 TARGET_MOUNT_POINTS_SYMLINKS := false

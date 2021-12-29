@@ -90,6 +90,10 @@ PRODUCT_PACKAGES += \
 # Config Store
 PRODUCT_PACKAGES += disable_configstore
 
+# Display
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.display.enable_async_powermode=0
+
 # DPM
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.dpmhalservice.enable=1
@@ -185,6 +189,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.dbg.wfc_avail_ovr=1
 
 # Sensors
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.sensors.hal_trigger_ssr=false \
+    persist.vendor.sensors.odl.adsp=true \
+    persist.vendor.sensors.enable.rt_task=false \
+    persist.vendor.sensors.support_direct_channel=false \
+    persist.vendor.sensors.enable.bypass_worker=true
+
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.accelerometer.xml \
     frameworks/native/data/etc/android.hardware.sensor.compass.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.compass.xml \

@@ -95,6 +95,14 @@ PRODUCT_PACKAGES += \
 # Config Store
 PRODUCT_PACKAGES += disable_configstore
 
+# ConsumerIR
+PRODUCT_PACKAGES += \
+     android.hardware.ir@1.0-impl \
+     android.hardware.ir@1.0-service
+
+PRODUCT_COPY_FILES += \
+     frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.consumerir.xml
+
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.display.enable_async_powermode=0

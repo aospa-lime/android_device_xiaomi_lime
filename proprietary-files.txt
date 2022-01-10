@@ -1,4 +1,4 @@
-# ADSPRPC - from LA.UM.9.15.r1-02200-KAMORTA.0
+# ADSPRPC - from LA.UM.9.15.r1-02000-KAMORTA.0
 vendor/bin/adsprpcd
 vendor/bin/cdsprpcd
 vendor/bin/dspservice
@@ -19,17 +19,6 @@ vendor/lib64/libsysmon_cdsp_skel.so
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 
 # Adreno-firmware - MIUI
-vendor/firmware/a610_zap.b00
-vendor/firmware/a610_zap.b01
-vendor/firmware/a610_zap.b02
-vendor/firmware/a610_zap.elf
-vendor/firmware/a610_zap.mdt
-vendor/firmware/a620_zap.b00
-vendor/firmware/a620_zap.b01
-vendor/firmware/a620_zap.b02
-vendor/firmware/a620_zap.elf
-vendor/firmware/a620_zap.mdt
-vendor/firmware/a630_sqe.fw
 vendor/firmware/a650_gmu.bin
 vendor/firmware/a650_sqe.fw
 vendor/firmware/a650_zap.b00
@@ -37,12 +26,9 @@ vendor/firmware/a650_zap.b01
 vendor/firmware/a650_zap.b02
 vendor/firmware/a650_zap.elf
 vendor/firmware/a650_zap.mdt
-vendor/firmware/a702_sqe.fw
-vendor/firmware/a702_zap.b00
-vendor/firmware/a702_zap.b01
-vendor/firmware/a702_zap.b02
-vendor/firmware/a702_zap.elf
-vendor/firmware/a702_zap.mdt
+
+# Adreno-vulkan - from LA.UM.9.15.r1-02000-KAMORTA.0
+vendor/lib64/hw/vulkan.adreno.so
 
 # ADSP-Modules - MIUI
 vendor/lib/rfsa/adsp/libapps_mem_heap.so
@@ -54,6 +40,7 @@ vendor/lib/rfsa/adsp/libsns_device_mode_skel.so
 vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so
 
 # Xiaomi Modules - MIUI
+vendor/lib/soundfx/libmisoundfx.so
 vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDADV_Encoder.so
 vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDAD_Speech_Decoder.so
 vendor/lib/rfsa/adsp/misound_karaokemix_res.bin
@@ -61,14 +48,13 @@ vendor/lib/rfsa/adsp/misound_karaoke_res.bin
 vendor/lib/rfsa/adsp/misound_res.bin
 vendor/lib/rfsa/adsp/misound_res_headphone.bin
 
-# Audio - MIUI
+# Audio - from LA.UM.9.15.r1-02000-KAMORTA.0
 vendor/lib/hw/sound_trigger.primary.bengal.so
 vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libqcbassboost.so
 vendor/lib/soundfx/libqcreverb.so
 vendor/lib/soundfx/libqcvirt.so
 vendor/lib/soundfx/libshoebox.so
-vendor/lib/soundfx/libmisoundfx.so
 vendor/lib/libAlacSwDec.so
 vendor/lib/libApeSwDec.so
 vendor/lib/libFlacSwDec.so
@@ -184,7 +170,7 @@ vendor/lib64/libacdb-fts.so
 vendor/lib64/libacdbloader.so
 vendor/lib64/libacdbrtac.so
 
-# Audio-aptX - MIUI
+# Audio-aptX - from LA.UM.9.15.r1-02000-KAMORTA.0
 vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDAD_Speech_Decoder.so
 vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDADV_Encoder.so
 
@@ -197,7 +183,7 @@ vendor/firmware/aw87519_drcv.bin
 vendor/firmware/aw87519_hvload.bin
 vendor/firmware/aw87519_kspk.bin
 
-# Bluetooth - MIUI
+# Bluetooth - from LA.UM.9.15.r1-02000-KAMORTA.0
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
 vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
@@ -229,13 +215,13 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
-# Charger - MIUI
+# Charger - from LA.UM.9.15.r1-02000-KAMORTA.0
 vendor/bin/hvdcp_opti
 vendor/bin/init.qti.chg_policy.sh
 vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc
 vendor/etc/charger_fstab.qti
 
-# CNE - MIUI 
+# CNE - from LA.UM.9.15.r1-02000-KAMORTA.0
 -vendor/app/CACertService/CACertService.apk
 -vendor/app/CneApp/CneApp.apk
 -vendor/app/IWlanService/IWlanService.apk
@@ -268,8 +254,8 @@ vendor/etc/cne/wqeclient/VZW/VZW_profile3.xml
 vendor/etc/cne/wqeclient/VZW/VZW_profile4.xml
 vendor/etc/cne/wqeclient/VZW/VZW_profile5.xml
 vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml
-vendor/etc/cne/profileSlm.xml
-vendor/etc/cne/slm.conf
+vendor/etc/cne/mwqem.conf
+vendor/etc/cne/profileMwqem.xml
 vendor/etc/default-permissions/com.qualcomm.qti.cne.xml
 vendor/etc/init/cnd.rc
 vendor/etc/init/mutualex.rc
@@ -291,6 +277,7 @@ vendor/lib64/vendor.qti.hardware.data.cne.internal.api@1.0.so
 vendor/lib64/vendor.qti.hardware.data.cne.internal.constants@1.0.so
 vendor/lib64/vendor.qti.hardware.data.cne.internal.server@1.0.so
 vendor/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so
+vendor/lib64/vendor.qti.hardware.mwqemadapter@1.0.so
 vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so
 vendor/lib64/vendor.qti.hardware.slmadapter@1.0.so
 vendor/lib64/vendor.qti.latency@2.0.so
@@ -647,24 +634,24 @@ vendor/etc/camera/morpho_lowlight5.0_algoup.xml
 vendor/etc/camera/vidhance_calibration
 vendor/etc/camera/watermark_font_2300_3199.dat
 
-# Config Store - MIUI
+# Config Store - from LA.UM.9.15.r1-02000-KAMORTA.0
 vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service
 vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 
-# Connection Security - MIUI
+# Connection Security - from LA.UM.9.15.r1-02000-KAMORTA.0
 vendor/bin/ssgqmigd
 vendor/bin/ssgtzd
 vendor/etc/init/ssgtzd.rc
 vendor/lib64/libminksocket.so
 
-# DPM - MIUI 
+# DPM - from LA.UM.9.15.r1-02000-KAMORTA.0
 vendor/bin/dpmQmiMgr
 vendor/etc/init/dpmQmiMgr.rc
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
 vendor/lib64/libdpmqmihal.so
 
-# Data - MIUI
+# Data - from LA.UM.9.15.r1-02000-KAMORTA.0
 vendor/bin/ATFWD-daemon
 vendor/bin/adpl
 vendor/bin/embmsslServer
@@ -707,7 +694,7 @@ vendor/firmware/ipa_fws.b04
 vendor/firmware/ipa_fws.elf
 vendor/firmware/ipa_fws.mdt
 
-# Diag - MIUI
+# Diag - from LA.UM.9.15.r1-02000-KAMORTA.0
 vendor/lib/libdiag.so
 vendor/lib64/libdiag.so
 
@@ -741,10 +728,10 @@ vendor/etc/qdcm_calib_data_sw43404_amoled_video_mode_dsi_boe_panel_with_DSC.xml
 vendor/etc/qdcm_calib_data_td4330_v2_cmd_mode_dsi_truly_panel.xml
 vendor/etc/qdcm_calib_data_td4330_v2_video_mode_dsi_truly_panel.xml
 
-# Display (HDR) - MIUI
+# Display (HDR) - from LA.UM.9.15.r1-02000-KAMORTA.0
 vendor/lib64/libhdr_tm.so
 
-# Display (SDM) - MIUI
+# Display (SDM) - from LA.UM.9.15.r1-02000-KAMORTA.0
 vendor/lib64/libdisplayqos.so
 vendor/lib64/libdisplayskuutils.so
 vendor/lib64/libqseed3.so
@@ -765,7 +752,7 @@ vendor/firmware/nt33672d_xinli_novatek_ts_fw.bin
 vendor/firmware/nt33672d_xinli_novatek_ts_mp.bin
 vendor/etc/focal/focaltech_mp_fw_huaxing.ini
 
-# Display postprocessing - MIUI
+# Display postprocessing - from LA.UM.9.15.r1-02000-KAMORTA.0
 vendor/bin/hw/vendor.display.color@1.0-service
 vendor/bin/ppd
 vendor/etc/init/vendor.display.color@1.0-service.rc
@@ -778,7 +765,7 @@ vendor/lib64/vendor.display.color@1.4.so
 vendor/lib64/vendor.display.color@1.5.so
 vendor/lib64/vendor.display.postproc@1.0.so
 
-# FASTCV - MIUI
+# FASTCV - from LA.UM.9.15.r1-02000-KAMORTA.0
 vendor/lib/rfsa/adsp/libapps_mem_heap.so
 vendor/lib/rfsa/adsp/libdspCV_skel.so
 vendor/lib/rfsa/adsp/libfastcvadsp.so
@@ -811,7 +798,7 @@ vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 
-# GPS - MIUI
+# GPS - from LA.UM.9.15.r1-02000-KAMORTA.0
 vendor/bin/garden_app
 vendor/bin/loc_launcher
 vendor/bin/lowi-server
@@ -865,7 +852,7 @@ vendor/lib64/vendor.qti.gnss@4.0.so
 vendor/lib64/vendor.qti.gnss@4.0-service.so
 vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so
 
-# IMS - MIUI
+# IMS - from LA.UM.9.15.r1-02000-KAMORTA.0
 vendor/bin/ims_rtp_daemon
 vendor/bin/imsdatadaemon
 vendor/bin/imsqmidaemon
@@ -917,16 +904,16 @@ vendor/lib64/libkeymasterprovision.so
 vendor/lib64/libkeymasterutils.so
 vendor/lib64/libqtikeymaster4.so
 
-# Latency - MIUI
+# Latency - from LA.UM.9.15.r1-02000-KAMORTA.0
 vendor/lib64/vendor.qti.hardware.data.latency@1.0.so
 
 # Media - MIUI
 vendor/etc/system_properties.xml
 
-# MDM - MIUI
+# MDM - from LA.UM.9.15.r1-02000-KAMORTA.0
 vendor/bin/ks
 
-# Mlipay
+# Mlipay - MIUI
 vendor/bin/mlipayd@1.1
 vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc
 -vendor/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.mlipay.xml
@@ -936,7 +923,7 @@ vendor/lib64/vendor.xiaomi.hardware.mlipay@1.0.so
 vendor/lib64/vendor.xiaomi.hardware.mlipay@1.1.so
 vendor/lib64/vendor.xiaomi.hardware.mtdservice@1.0.so
 
-# MMI - MIUI
+# MMI - from LA.UM.9.15.r1-02000-KAMORTA.0
 vendor/bin/hw/vendor.qti.hardware.factory@1.0-service
 vendor/bin/mmid
 vendor/etc/init/vendor.qti.hardware.factory@1.0-service.rc
@@ -945,11 +932,11 @@ vendor/etc/permissions/vendor.qti.hardware.factory.xml
 vendor/lib64/vendor.qti.hardware.factory@1.0.so
 vendor/lib64/vendor.qti.hardware.factory@1.1.so
 
-# MM OSAL - MIUI
+# MM OSAL - from LA.UM.9.15.r1-02000-KAMORTA.0
 vendor/lib/libmmosal.so
 vendor/lib64/libmmosal.so
 
-# Neural Networks - MIUI
+# Neural Networks - from LA.UM.9.15.r1-02000-KAMORTA.0
 vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-qti
 vendor/etc/init/android.hardware.neuralnetworks@1.3-service-qti.rc
 -vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti.xml
@@ -959,12 +946,12 @@ vendor/lib64/unnhal-acc-adreno.so
 vendor/lib64/unnhal-acc-common.so
 vendor/lib64/unnhal-acc-hvx.so
 
-# PD - MIUI
+# PD - from LA.UM.9.15.r1-02000-KAMORTA.0
 vendor/bin/pd-mapper
 vendor/lib64/libpdmapper.so
 vendor/lib64/libpdnotifier.so
 
-# Peripheral Manager - MIUI
+# Peripheral Manager - from LA.UM.9.15.r1-02000-KAMORTA.0
 vendor/bin/pm-proxy
 vendor/bin/pm-service
 vendor/lib64/libperipheral_client.so
@@ -972,29 +959,19 @@ vendor/lib64/libperipheral_client.so
 # Power - MIUI
 vendor/etc/powerhint.xml
 
-# Power-off Alarm - MIUI
--product/app/PowerOffAlarm/PowerOffAlarm.apk
-system_ext/framework/vendor.qti.hardware.alarm-V1.0-java.jar
-vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service
-vendor/bin/power_off_alarm
-vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
-vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
-vendor/lib64/vendor.qti.hardware.alarm@1.0.so
-
-# QCC VND HAL - MIUI
+# QCC VND HAL - from LA.UM.9.15.r1-02000-KAMORTA.0
 vendor/bin/hw/vendor.qti.hardware.qccvndhal@1.0-service
 vendor/etc/init/vendor.qti.hardware.qccvndhal@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.qccvndhal@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.qccvndhal@1.0-halimpl.so
 vendor/lib64/vendor.qti.hardware.qccvndhal@1.0.so
 
-# QDMA - MIUI
--vendor/app/QCC-TR-UI/QCC-TR-UI.apk
+# QDMA - from LA.UM.9.15.r1-02000-KAMORTA.0
 vendor/bin/qcc-trd
 vendor/etc/init/init.qdmastats.rc
 vendor/lib64/libqdma_file_agent.so
 
-# QMI - MIUI
+# QMI - from LA.UM.9.15.r1-02000-KAMORTA.0
 vendor/bin/irsc_util
 vendor/bin/qrtr-cfg
 vendor/bin/qrtr-lookup
@@ -1035,7 +1012,7 @@ vendor/lib64/libqsocket.so
 vendor/lib64/libsmemlog.so
 vendor/lib64/libsystem_health_mon.so
 
-# QCRIL - MIUI
+# QCRIL - from LA.UM.9.15.r1-02000-KAMORTA.0
 vendor/bin/hw/qcrild
 vendor/bin/qtigetprop
 vendor/bin/qtisetprop
@@ -1091,7 +1068,7 @@ vendor/radio/qcril_database/upgrade/6_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/8_version_update_ecc_table.sql
 vendor/radio/qcril_database/qcril.db
 
-# QCV - MIUI
+# QCV - from LA.UM.9.15.r1-02000-KAMORTA.0
 vendor/bin/init.qti.qcv.sh
 vendor/etc/init/init.qti.qcv.rc
 vendor/lib/libsoc_helper.so
@@ -1099,7 +1076,7 @@ vendor/lib/libsoc_helper_jni.so
 vendor/lib64/libsoc_helper.so
 vendor/lib64/libsoc_helper_jni.so
 
-# QTEE - MIUI
+# Qualcomm Trusted Execution Environment - from LA.UM.9.15.r1-02000-KAMORTA.0
 vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service
 vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so
@@ -1108,7 +1085,7 @@ vendor/lib64/libGPTEE_vendor.so
 vendor/lib64/libQTEEConnector_vendor.so
 vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
 
-# QSEECOM - MIUI
+# QSEECOM - from LA.UM.9.15.r1-02000-KAMORTA.0
 vendor/bin/hw/vendor.qti.hardware.qseecom@1.0-service
 vendor/bin/qseecomd
 vendor/etc/init/qseecomd.rc
@@ -1124,18 +1101,18 @@ vendor/lib64/librpmb.so
 vendor/lib64/libssd.so
 vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
 
-# QSPM HAL - MIUI
+# QSPM HAL - from LA.UM.9.15.r1-02000-KAMORTA.0
 vendor/bin/vendor.qti.qspmhal@1.0-service
 vendor/etc/init/vendor.qti.qspmhal@1.0-service.rc
 vendor/etc/seccomp_policy/qspm.policy
 vendor/lib64/vendor.qti.qspmhal@1.0.so
 vendor/lib64/vendor.qti.qspmhal@1.0-impl.so
 
-# RemoteFS - MIUI
+# RemoteFS - from LA.UM.9.15.r1-02000-KAMORTA.0
 vendor/bin/rmt_storage
 vendor/etc/init/vendor.qti.rmt_storage.rc
 
-# SCVE - MIUI
+# SCVE - from LA.UM.9.15.r1-02000-KAMORTA.0
 vendor/lib64/libscveCommon.so
 vendor/lib64/libscveCommon_stub.so
 vendor/lib64/libscveObjectSegmentation.so
@@ -1145,7 +1122,7 @@ vendor/lib64/libscveObjectTracker_stub.so
 vendor/lib64/vendor.qti.hardware.scve.objecttracker@1.0.so
 vendor/lib64/vendor.qti.hardware.scve.panorama@1.0.so
 
-# SMC Invoke - MIUI
+# SMC Invoke - from LA.UM.9.15.r1-02000-KAMORTA.0
 vendor/etc/ssg/ta_config.json
 vendor/etc/ssg/tz_whitelist.json
 vendor/lib64/libminkdescriptor.so
@@ -1310,7 +1287,7 @@ vendor/lib64/libsns_registry_skel.so
 vendor/lib64/libssc.so
 vendor/lib64/sensors.ssc.so
 
-# SNS (Calibration) - MIUI
+# SNS (Calibration) - from LA.UM.9.15.r1-02000-KAMORTA.0
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
 vendor/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc
 vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml
@@ -1318,14 +1295,14 @@ vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
 vendor/lib64/libsensorcal.so
 vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
 
-# SecureMSM (GPQESE)
+# SecureMSM (GPQESE) - from LA.UM.9.15.r1-02000-KAMORTA.0
 vendor/bin/hw/vendor.qti.esepowermanager@1.1-service
 vendor/etc/init/vendor.qti.esepowermanager@1.1-service.rc
 vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so
 vendor/lib64/vendor.qti.esepowermanager@1.0.so
 vendor/lib64/vendor.qti.esepowermanager@1.1.so
 
-# SecureMSM (SECDISP)
+# SecureMSM (SECDISP) - from LA.UM.9.15.r1-02000-KAMORTA.0
 vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
 vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
 vendor/lib64/libSecureUILib.so
@@ -1336,7 +1313,7 @@ vendor/lib64/libsi.so
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 
-# SecureMSM
+# SecureMSM - from LA.UM.9.15.r1-02000-KAMORTA.0
 vendor/bin/hdcp1prov
 vendor/bin/hdcp2p2prov
 vendor/lib64/libbase64.so
@@ -1350,7 +1327,7 @@ vendor/lib64/libqisl.so
 vendor/lib64/libtrustedapploader.so
 vendor/lib64/libtzdrmgenprov.so
 
-# Soter
+# Soter - from LA.UM.9.15.r1-02000-KAMORTA.0
 vendor/bin/hw/vendor.qti.hardware.soter@1.0-service
 vendor/bin/vendor.qti.hardware.soter@1.0-provision
 vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
@@ -1360,11 +1337,11 @@ vendor/lib64/vendor.qti.hardware.soter@1.0.so
 # Snapdragon Vision - MIUI
 vendor/etc/SVIConfig.xml
 
-# TFTP
+# TFTP - from LA.UM.9.15.r1-02000-KAMORTA.0
 vendor/bin/tftp_server
 vendor/etc/init/vendor.qti.tftp.rc
 
-# TLOC - MIUI
+# TLOC - from LA.UM.9.15.r1-02000-KAMORTA.0
 vendor/bin/tloc_daemon
 
 # Thermal - MIUI
@@ -1375,7 +1352,7 @@ vendor/etc/thermal-engine.conf
 -vendor/lib/libthermalclient.so
 -vendor/lib64/libthermalclient.so
 
-# Time Services - MIUI 
+# Time Services - from LA.UM.9.15.r1-02000-KAMORTA.0
 -vendor/app/TimeService/TimeService.apk
 vendor/bin/time_daemon
 vendor/etc/init/init.time_daemon.rc
@@ -1388,7 +1365,7 @@ vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
 vendor/lib64/mediadrm/libwvdrmengine.so
 vendor/lib64/libwvhidl.so
 
-# VPP - MIUI
+# VPP - from LA.UM.9.15.r1-02000-KAMORTA.0
 vendor/lib/vendor.qti.hardware.vpp@1.1.so
 vendor/lib/vendor.qti.hardware.vpp@1.2.so
 vendor/lib64/vendor.qti.hardware.vpp@1.1.so

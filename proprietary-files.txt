@@ -1373,3 +1373,15 @@ vendor/lib64/vendor.qti.hardware.vpp@1.2.so
 
 # WiFi - MIUI
 vendor/bin/cnss-daemon|41dc69f7ad479aea585b5ff3a78a59bdd9522c2f
+vendor/bin/fstman|6d6ef8022ddc917ff2ad41189171c1f2b8212ce2
+vendor/bin/sigma_dut|658605e33ecea01450f1071ec954612423a91638
+vendor/etc/hostapd/hostapd.accept|4ef58266ff29fd5ad1639f212d8e025bfd5a8418
+vendor/etc/hostapd/hostapd_default.conf|7f02cf956e77c370b79de725a1296ba182da2906
+vendor/etc/hostapd/hostapd.deny|19522d391a92f701d3329bcd9cc1bd810e5b89a3
+vendor/etc/wifi/aoa_cldb_falcon.bin|7511e868c40e66e9758568b7112894cbce2650a4
+vendor/etc/wifi/aoa_cldb_swl14.bin|2a3be07a8f24bc1b9798d07c7133b0f71b77738f
+vendor/etc/wifi/fstman.ini|0583604009194da2c311adb80ef6c2fa9e3f4998
+vendor/etc/wifi/icm.conf|20e32b9d7b47f8c3caeb7e2cae53b3ef49983c4b
+vendor/etc/wifi/p2p_supplicant_overlay.conf|0725cc89d1658b695f0345490dc5cab61c912480
+vendor/etc/wifi/wpa_supplicant.conf|eab77763c361f768abdba5af5fc39987cb559711
+vendor/etc/wifi/wpa_supplicant_overlay.conf|8a08fe916b6e31b73e4eae65f7339f87839d4867

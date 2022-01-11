@@ -566,7 +566,7 @@ vendor/lib64/libHalSuperSensorServer.so|c5051788ca61c19b79f1cbce2bf0f6c0b2908c6a
 vendor/lib64/libSuperSensor.so|eccb4d06525cf8853f2f0a3048602c3e01c5b26b
 vendor/lib64/libSuperSensorCPU.so|f0c373f6390e123db83f1ce419d212f75b8c8e74
 vendor/lib64/lib_lowlight.so|79374ced434b1522e16b178b888f21b39bb43ff2
-vendor/lib64/libicuuc.so
+vendor/lib64/libicuuc.so|0bece1a649929043726de7b48b832f9fb5f4c746
 vendor/lib64/libalCFR.so|2a9e16b76f8ecd81ebcfd80fd7d11ef4bd55ef3d
 vendor/lib64/libalLDC.so|d712ba02ba45a6bdebda0f2def39c93c7a180ba8
 vendor/lib64/libalhLDC.so|2475eac72173f10f963ce83ea1a32dc4b059fa82
@@ -858,6 +858,9 @@ vendor/lib64/vendor.qti.gnss@4.0.so
 vendor/lib64/vendor.qti.gnss@4.0-service.so
 vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so
 
+# liblocdiagiface - from oneplus8
+vendor/lib64/liblocdiagiface.so|31f88106b5aeceff4264f06ce5299455c3058499
+
 # IMS 
 vendor/bin/ims_rtp_daemon
 vendor/bin/imsdatadaemon
@@ -1025,6 +1028,7 @@ vendor/bin/qtigetprop
 vendor/bin/qtisetprop
 vendor/etc/init/init-qcril-data.rc
 vendor/etc/init/qcrild.rc
+vendor/lib64/deviceInfoServiceModule.so
 vendor/lib64/liblqe.so
 vendor/lib64/libqcrilFramework.so
 vendor/lib64/libqcrildatactl.so

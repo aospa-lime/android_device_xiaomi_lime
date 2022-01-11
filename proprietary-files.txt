@@ -1359,6 +1359,7 @@ vendor/etc/init/vendor.qti.tftp.rc
 
 # TLOC 
 vendor/bin/tloc_daemon
+vendor/etc/init/tloc_daemon.rc
 
 # Thermal - MIUI
 vendor/bin/mi_thermald|2cb2d46219c6bc7005b61a6960b9f674049a586c

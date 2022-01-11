@@ -618,7 +618,9 @@ vendor/lib64/libwa_rtdof.so|4ee68f18cc23cf6a008dc6f5175edee52e4cafd7
 vendor/lib64/libwapi_cert.so|b76a000029e075efee9538af9cd224a2b3cdbd9f
 vendor/lib64/libxmi_high_dynamic_range.so|76dd49f6031ddc7d2cd2fc3475787ff0d1b63b79
 vendor/lib64/libxml2_vendor.so|336de129dd9072f31d8aaee3286e5f10c1bf32fe
-vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so|25146776338092f7c4a52d248df3838ec3b9402b
+
+# Camera - patched
+vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
 
 # Camera-configs - MIUI
 vendor/etc/camera/CFR_para_W108_V01.bin|6b3081a2f73b76a05349ffdb925332fc4ac6c3a8

@@ -54,4 +54,14 @@
         <fqname>@2.1::IGoodixFingerprintDaemon/default</fqname>
         <fqname>@2.1::IGoodixFingerprintDaemonExt/default</fqname>
     </hal>
+    <hal format="hidl">
+        <name>android.hardware.ir</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IConsumerIr</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IConsumerIr/default</fqname>
+    </hal>
 </manifest>

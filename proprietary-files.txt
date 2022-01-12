@@ -562,6 +562,9 @@ vendor/lib64/com.qti.feature2.stub.so|b418ab03de4a676f9e7aac72f366355dd7a10c82
 vendor/lib64/com.qti.feature2.swmf.so|32bc8a107d40df20b23ea5f4a88eaf07d6d539d5
 vendor/lib64/hw/camera.qcom.so|546f38c96b890a70edbbd0713d36c73ae16e468e
 vendor/lib64/hw/com.qti.chi.override.so|6bebe7280e4af0676731ea01b1b2a0b886f0f77b
+vendor/lib64/libdng_sdk2vendor.so|df7487d013c78b7c6a77ccd9be10fa8e115ed7c8
+vendor/lib64/libflaw.so|565c09d61dde8e1854822472221b9c0f28fc8699
+vendor/lib64/libft2vendor.so|fd87e8dbbb193d263d60bd352813b686633cba65
 vendor/lib64/libHalSuperSensorServer.so|c5051788ca61c19b79f1cbce2bf0f6c0b2908c6a
 vendor/lib64/libSuperSensor.so|eccb4d06525cf8853f2f0a3048602c3e01c5b26b
 vendor/lib64/libSuperSensorCPU.so|f0c373f6390e123db83f1ce419d212f75b8c8e74
@@ -620,7 +623,7 @@ vendor/lib64/libxmi_high_dynamic_range.so|76dd49f6031ddc7d2cd2fc3475787ff0d1b63b
 vendor/lib64/libxml2_vendor.so|336de129dd9072f31d8aaee3286e5f10c1bf32fe
 
 # Camera - patched
-vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
+vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so|040754908683f59ee1b5b7f962f659fbed3a515a
 
 # Camera-configs - MIUI
 vendor/etc/camera/CFR_para_W108_V01.bin|6b3081a2f73b76a05349ffdb925332fc4ac6c3a8
@@ -648,7 +651,7 @@ vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 
 # ConsumerIR - MIUI
-vendor/lib64/hw/consumerir.default.so
+vendor/lib64/hw/consumerir.default.so|1d7997ac1dfc22742e051c1a3eae91f5a566f8f9
 
 # Connection Security 
 vendor/bin/ssgqmigd

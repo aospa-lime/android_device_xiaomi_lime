@@ -19,13 +19,30 @@ vendor/lib64/libsysmon_cdsp_skel.so
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 
 # Adreno-firmware - MIUI
-vendor/firmware/a650_gmu.bin|c744acb10afb7c980d333c5b6521e2a18993ff14
-vendor/firmware/a650_sqe.fw|12a8b97c9dd9de7eb759dada1ae11c5cdc08a2a2
-vendor/firmware/a650_zap.b00|8c20cfff20d7fe9814581b353c1f58d38636e8c5
-vendor/firmware/a650_zap.b01|883cb3872482069a11645317dd55a7dbde6e4bd9
-vendor/firmware/a650_zap.b02|270bae014df75a913c6c124155f2cc85706258e6
-vendor/firmware/a650_zap.elf|c7aac1976a0a9381a9d952373a29fe81c5c3dd00
-vendor/firmware/a650_zap.mdt|9234a800843daea16e0474ea30b6fd7be92c0222
+vendor/firmware/a610_zap.b00
+vendor/firmware/a610_zap.b01
+vendor/firmware/a610_zap.b02
+vendor/firmware/a610_zap.elf
+vendor/firmware/a610_zap.mdt
+vendor/firmware/a620_zap.b00
+vendor/firmware/a620_zap.b01
+vendor/firmware/a620_zap.b02
+vendor/firmware/a620_zap.elf
+vendor/firmware/a620_zap.mdt
+vendor/firmware/a630_sqe.fw
+vendor/firmware/a650_gmu.bin
+vendor/firmware/a650_sqe.fw
+vendor/firmware/a650_zap.b00
+vendor/firmware/a650_zap.b01
+vendor/firmware/a650_zap.b02
+vendor/firmware/a650_zap.elf
+vendor/firmware/a650_zap.mdt
+vendor/firmware/a702_sqe.fw
+vendor/firmware/a702_zap.b00
+vendor/firmware/a702_zap.b01
+vendor/firmware/a702_zap.b02
+vendor/firmware/a702_zap.elf
+vendor/firmware/a702_zap.mdt
 
 # Adreno-vulkan 
 vendor/lib64/hw/vulkan.adreno.so

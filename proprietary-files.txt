@@ -617,6 +617,10 @@ vendor/lib64/libcom.qti.chinodeutils.so|55b13e4afdd631c4eb980ee75652160d2ba02a36
 vendor/lib64/libmiStereoFactoryRemapLib.so|84495aac72c630417fe128b409a233a1aacd66d3
 vendor/lib64/libmiai_supernight.so|c388c01904bf502c1f71dfc2024306c95a42cd6c
 vendor/lib64/libmialgoengine.so|366c4ae96fdb5de6e95ec1c4e51db62f5c836768
+vendor/lib64/libvideofilter_only.so
+vendor/lib64/libtfestriping.so
+vendor/lib64/libopestriping.so
+vendor/lib64/libaidenoiser.so
 vendor/lib64/libmibokeh_712.so|aaccc31eeb02d4121eb6074f1bf0e42b4f8a9db5
 vendor/lib64/libmmcamera_cac3.so|ea90c6549710cc15cac42b8a5d95a9b41dcbeb80
 vendor/lib64/libmmcamera_faceproc.so|e96b400c33efa56f7c0d01b642ca1cf277b380ac

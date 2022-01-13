@@ -154,6 +154,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.crypto.volume.filenames_mode="aes-256-cts" \
     ro.hardware.keystore_desede=true
 
+# Netflix
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.netflix.bsp_rev=Q6115-31409-1
+
 # Neural networks
 PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3.vendor

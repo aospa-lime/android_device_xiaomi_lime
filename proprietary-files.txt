@@ -44,9 +44,6 @@ vendor/firmware/a702_zap.b02|57f9df7250b813f13313bc84d78eeb794ac60732
 vendor/firmware/a702_zap.elf|d51606fdc9297b7b7f29e320871bd28fcfcf53d5
 vendor/firmware/a702_zap.mdt|217b559a374a471c010dee8cc48b543d6973cb4a
 
-# Adreno-vulkan 
-vendor/lib64/hw/vulkan.adreno.so
-
 # ADSP-Modules - MIUI
 vendor/lib/rfsa/adsp/libapps_mem_heap.so|738014e904331e99749f36c8f6c0c43b8c246fe6
 vendor/lib/rfsa/adsp/libbitml_nsp_skel.so|9bb23f8b7fa5f06319a1e62195d85a8dd4029c85
@@ -288,6 +285,7 @@ vendor/lib64/libxml.so
 vendor/lib64/vendor.qti.data.factory@2.0.so
 vendor/lib64/vendor.qti.data.factory@2.1.so
 vendor/lib64/vendor.qti.data.factory@2.2.so
+vendor/lib64/vendor.qti.data.factory@2.3.so
 vendor/lib64/vendor.qti.data.mwqem@1.0.so
 vendor/lib64/vendor.qti.data.slm@1.0.so
 vendor/lib64/vendor.qti.hardware.cacert@1.0.so
@@ -297,8 +295,10 @@ vendor/lib64/vendor.qti.hardware.data.cne.internal.server@1.0.so
 vendor/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so
 vendor/lib64/vendor.qti.hardware.mwqemadapter@1.0.so
 vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so
+vendor/lib64/vendor.qti.hardware.data.lce@1.0.so
 vendor/lib64/vendor.qti.hardware.slmadapter@1.0.so
 vendor/lib64/vendor.qti.latency@2.0.so
+vendor/lib64/vendor.qti.latency@2.1.so
 
 # Camera - MIUI
 vendor/lib/camera/com.qti.eeprom.lime_ofilm_ov8856_front_eeprom.so|26caa4ebd52e531d2375bd29b98401fac93af926
@@ -639,8 +639,8 @@ vendor/lib64/libwapi_cert.so|b76a000029e075efee9538af9cd224a2b3cdbd9f
 vendor/lib64/libxmi_high_dynamic_range.so|76dd49f6031ddc7d2cd2fc3475787ff0d1b63b79
 vendor/lib64/libxml2_vendor.so|336de129dd9072f31d8aaee3286e5f10c1bf32fe
 
-# Camera - patched
-vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so|040754908683f59ee1b5b7f962f659fbed3a515a
+# Camera - from QSSI12/kona
+vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so|531e73fb8e0a0121d681c83899ec8592f9d94ef1
 
 # Camera-configs - MIUI
 vendor/etc/camera/CFR_para_W108_V01.bin|6b3081a2f73b76a05349ffdb925332fc4ac6c3a8
@@ -863,6 +863,7 @@ vendor/lib64/libizat_client_api.so
 vendor/lib64/libizat_core.so
 vendor/lib64/liblbs_core.so
 vendor/lib64/libloc_api_v02.so
+vendor/lib64/libloc_api_wds.so
 vendor/lib64/libloc_socket.so
 vendor/lib64/liblocationservice.so
 vendor/lib64/liblocationservice_glue.so
@@ -924,6 +925,7 @@ vendor/lib64/librcc.so
 vendor/lib64/vendor.qti.ims.callcapability@1.0.so
 vendor/lib64/vendor.qti.ims.callinfo@1.0.so
 vendor/lib64/vendor.qti.ims.factory@1.0.so
+vendor/lib64/vendor.qti.ims.factory@1.1.so
 vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so
 vendor/lib64/vendor.qti.ims.rcsconfig@1.1.so
 vendor/lib64/vendor.qti.ims.rcsconfig@2.0.so
@@ -1108,6 +1110,8 @@ vendor/radio/qcril_database/upgrade/5_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/6_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/7_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/8_version_update_ecc_table.sql
+vendor/radio/qcril_database/upgrade/9_version_update_ecc_table.sql
+vendor/radio/qcril_database/upgrade/10_version_update_ecc_table.sql
 vendor/radio/qcril_database/qcril.db
 
 # QCV 
@@ -1329,30 +1333,34 @@ vendor/lib64/libsns_registry_skel.so|c150b630484b263698526c41bbbe2bc4f564f099
 vendor/lib64/libssc.so|3e157b6cd788c1c2fb7a35b790242816144a3354
 vendor/lib64/sensors.ssc.so|54a8b8176485b23deecdbd405e614d5fb5b97c6d
 
-# SNS (Calibration) 
-vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
-vendor/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc
-vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml
-vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
-vendor/lib64/libsensorcal.so
-vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
+# SNS (Calibration) - from LA.UM.9.15.r1-02200-KAMORTA.0
+vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service|34d1c360a906ada2340876a8226f83f9c3a9794c
+vendor/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc|449c88778d880c0d47cc4d651fc60c4c424c1a3f
+vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml|f4884c1776c9f77c24bfce853fe22627ea4b7f79
+vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so|edae0cd0be7570cfeb62c8afcd271833ce7ab3ef
+vendor/lib64/libsensorcal.so|84d0d98aca9f0094ea0816570e4653e2510967c1
+vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so|028f65c23e91b0b4674ec89c203955db312c6626
 
-# SecureMSM (GPQESE) 
+# SecureMSM (GPQESE)
 vendor/bin/hw/vendor.qti.esepowermanager@1.1-service
+vendor/bin/hw/vendor.qti.secure_element@1.2-service
 vendor/etc/init/vendor.qti.esepowermanager@1.1-service.rc
+vendor/etc/init/vendor.qti.secure_element@1.2-service.rc
 vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so
+vendor/lib64/android.hardware.secure_element@1.0-impl.so
 vendor/lib64/vendor.qti.esepowermanager@1.0.so
 vendor/lib64/vendor.qti.esepowermanager@1.1.so
+vendor/lib64/se_nq_extn_client.so
 
 # SecureMSM (SECDISP) 
 vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
 vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
-vendor/lib64/libSecureUILib.so
-vendor/lib64/libStDrvInt.so
 vendor/lib64/libsecureui_svcsock.so
-vendor/lib64/libsecureui.so
 vendor/lib64/libsi.so
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
+vendor/lib64/vendor.qti.hardware.trustedui@1.0.so
+vendor/lib64/vendor.qti.hardware.trustedui@1.1.so
+vendor/lib64/vendor.qti.hardware.trustedui@1.2.so
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 
 # SecureMSM 
@@ -1366,6 +1374,7 @@ vendor/lib64/libhdcp2p2prov.so
 vendor/lib64/liboemcrypto.so
 vendor/lib64/libops.so
 vendor/lib64/libqisl.so
+vendor/lib64/libspl.so
 vendor/lib64/libtrustedapploader.so
 vendor/lib64/libtzdrmgenprov.so
 
@@ -1408,11 +1417,19 @@ vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc|a9ce64f68c86725c06c
 vendor/lib64/mediadrm/libwvdrmengine.so|218de2b66c78cb1387ebba87516bddfc3701fd1f
 vendor/lib64/libwvhidl.so|88fd57c6bad6adc4960d2308cd3b419550a3b1ec
 
-# VPP 
-vendor/lib/vendor.qti.hardware.vpp@1.1.so
-vendor/lib/vendor.qti.hardware.vpp@1.2.so
+# VPP
+vendor/bin/vppservice
+vendor/etc/configstore/vpp.configstore.xml
+vendor/etc/init/vppservice.rc
+vendor/lib64/libvppclient.so
+vendor/lib64/libvpphcp.so
+vendor/lib64/libvpphvx.so
+vendor/lib64/libvppimmotion.so
+vendor/lib64/libvpplibrary.so
+vendor/lib64/libvpptestutils.so
 vendor/lib64/vendor.qti.hardware.vpp@1.1.so
 vendor/lib64/vendor.qti.hardware.vpp@1.2.so
+vendor/lib64/vendor.qti.hardware.vpp@1.3.so
 
 # WiFi - MIUI
 vendor/bin/cnss-daemon|41dc69f7ad479aea585b5ff3a78a59bdd9522c2f

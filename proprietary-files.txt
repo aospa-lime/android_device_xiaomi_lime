@@ -187,10 +187,6 @@ vendor/lib64/libacdb-fts.so|4068ac6d97cab09b39a6e1d0913d62584bc56314
 vendor/lib64/libacdbloader.so|9aec9658e318b0ebae34f190bd995286ea090dba
 vendor/lib64/libacdbrtac.so|3f639049671cfb242f2b70463dfa333e1c6e11e4
 
-# Audio-aptX 
-vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDAD_Speech_Decoder.so
-vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDADV_Encoder.so
-
 # Audio-Firmware - MIUI
 vendor/firmware/aw87359_abrcv.bin|65a5d4bded5d1a79db02e87fcdd9e0c3c344cef3
 vendor/firmware/aw87359_abspk.bin|f7ca56d92fc0bb4de1e439bfb894c40a0c8f4147

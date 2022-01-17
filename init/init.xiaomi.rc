@@ -1,4 +1,4 @@
-# Copyright (C) 2021 Paranoid Android
+# Copyright (C) 2022 Paranoid Android
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -20,6 +20,18 @@ on boot
     write /data/vendor/wlansar/wlansar.cfg 0
     chmod 0666 /data/vendor/wlansar/wlansar.cfg
 
+    write /dev/cpuset/audio-app/cpus 1-2
+
+    # Change the ownership of display_pwr
+    chown system system /sys/kernel/hbtp/display_pwr
+
+    start vendor.rmt_storage
+
+    chown system system /sys/class/thermal/thermal_message/sconfig
+
+    chown system system /dev/qseecom
+    chmod 0666 /dev/qseecom
+
 on post-fs-data
     # LIRC/IR
     chown system system /dev/lirc0
@@ -35,3 +47,11 @@ on post-fs-data
 on early-init
     mount debugfs debugfs /sys/kernel/debug
     chmod 0755 /sys/kernel/debug
+
+on charger
+    start mi_thermald
+
+service mi_thermald /system/vendor/bin/mi_thermald
+    class main
+    user root
+    group system

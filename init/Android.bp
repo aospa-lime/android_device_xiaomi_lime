@@ -37,6 +37,27 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.xiaomi.display.rc",
+    src: "init.xiaomi.display.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.xiaomi.fingerprint.rc",
+    src: "init.xiaomi.fingerprint.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.xiaomi.camera.rc",
+    src: "init.xiaomi.camera.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "init.target.rc",
     src: "init.target.rc",
     sub_dir: "init/hw",

@@ -38,6 +38,7 @@ on init
     write /dev/stune/system-background/schedtune.colocate 0
     write /dev/stune/foreground/schedtune.colocate 0
     write /dev/stune/top-app/schedtune.colocate 1
+    #Moving to init as this is needed for qseecomd
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
     start vendor.qseecomd
@@ -70,91 +71,13 @@ on early-boot
     start vendor.sensors
 
 on boot
-    write /dev/cpuset/audio-app/cpus 1-2
-    chown system system /sys/kernel/hbtp/display_pwr
-    start vendor.rmt_storage
-
-    chown system system /sys/class/thermal/thermal_message/sconfig
-
-    # USB controller configuration
+#USB controller configuration
     setprop vendor.usb.rndis.func.name "gsi"
     setprop vendor.usb.rmnet.func.name "gsi"
     setprop vendor.usb.rmnet.inst.name "rmnet"
     setprop vendor.usb.dpl.inst.name "dpl"
     setprop vendor.usb.qdss.inst.name "qdss"
     setprop vendor.usb.controller 4e00000.dwc3
-
-    copy /vendor/etc/wifi/sar-vendor-cmd.xml /data/sar-vendor-cmd.xml
-
-#fingerprint
-    #goodix
-    chown system system /dev/goodix_fp
-    chmod 0777 /dev/goodix_fp
-    mkdir /data/vendor/goodix
-    chmod 0777 /data/vendor/goodix
-
-    # add for fpc 
-    chown system system /sys/bus/platform/devices/soc/soc:fpc1020/compatible_all
-    chmod 0666 /sys/bus/platform/devices/soc/soc:fpc1020/compatible_all
-    chown system system /sys/bus/platform/devices/soc/soc:fpc1020/irq
-    chmod 0666 /sys/bus/platform/devices/soc/soc:fpc1020/irq
-    chown system system /sys/bus/platform/devices/soc/soc:fpc1020/hw_reset
-    chmod 0666 /sys/bus/platform/devices/soc/soc:fpc1020/hw_reset
-    chown system system /sys/bus/platform/devices/soc/soc:fpc1020/wakeup_enable
-    chmod 0666 /sys/bus/platform/devices/soc/soc:fpc1020/wakeup_enable
-    chown system system /sys/bus/platform/devices/soc/soc:fpc1020/fingerdown_wait
-    chmod 0666 /sys/bus/platform/devices/soc/soc:fpc1020/fingerdown_wait
-    
-    chown system system /dev/qseecom
-    chmod 0666 /dev/qseecom
-
-    # display
-    chmod 0666 /sys/devices/platform/soc/5e00000.qcom,mdss_mdp/backlight/panel0-backlight/brightness
-    chmod 0666 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dsi_display_cabc
-    chmod 0666 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dsi_display_cabc_still
-    chmod 0666 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dsi_display_cabc_movie
-
-    # focaltech
-    chown system system /dev/focaltech_fp
-    chmod 0777 /dev/focaltech_fp
-    # fingerprint focaltech
-    mkdir /data/vendor/focaltech 0760 system system
-    restorecon /data/vendor/focaltech
-
-    # cdfinger
-    chown system system /dev/fpsdev0
-    chmod 0777 /dev/fpsdev0
-
-    # silead
-    mkdir /data/system/silead 0770 system system
-
-# add dual
-    mkdir /mnt/vendor/persist/camera 0777 system camera
-    mkdir /data/vendor/camera/model 0777 system camera
-    mkdir /data/vendor/camera/model/rt_model 0777 system camera
-    mkdir /data/vendor/camera/model/rt_model/mask 0777 system camera
-    mkdir /data/vendor/camera/model/rt_model/score 0777 system camera
-    mkdir /data/vendor/camera/model/bokeh_model 0777 system camera
-    copy /vendor/etc/camera/model/rt_model/cache_data /data/vendor/camera/model/rt_model/cache_data
-    chmod 0777 /data/vendor/camera/model/rt_model/cache_data
-    copy /vendor/etc/camera/model/rt_model/model_mdl_cache /data/vendor/camera/model/rt_model/model_mdl_cache
-    chmod 0777 /data/vendor/camera/model/rt_model/model_mdl_cache
-    copy /vendor/etc/camera/model/rt_model/segment_model /data/vendor/camera/model/rt_model/segment_model
-    chmod 0777 /data/vendor/camera/model/rt_model/segment_model
-    copy /vendor/etc/camera/model/bokeh_model/cache_data /data/vendor/camera/model/bokeh_model/cache_data
-    chmod 0777 /data/vendor/camera/model/bokeh_model/cache_data
-    copy /vendor/etc/camera/model/bokeh_model/model_mdl_cache /data/vendor/camera/model/bokeh_model/model_mdl_cache
-    chmod 0777 /data/vendor/camera/model/bokeh_model/model_mdl_cache
-    copy /vendor/etc/camera/model/bokeh_model/segment_model /data/vendor/camera/model/bokeh_model/segment_model
-    chmod 0777 /data/vendor/camera/model/bokeh_model/segment_model
-    chmod 0777 /vendor/etc/camera/com.xiaomi.dcal.wd.golden
-    chmod 0777 /data/vendor/camera/rear_dc_cal_wd.bin
-    chmod 0777 /mnt/vendor/persist/camera/rear_dc_cal_wd.bin
-    chmod 0777 /mnt/vendor/persist/camera/mi_calib_2k_output.bin
-
-# We want all cores for NFC
-    chmod 0666 /dev/st21nfc
-    chown nfc nfc /dev/st21nfc
 
 #Load WLAN driver
     insmod /vendor/lib/modules/qca_cld3_wlan.ko
@@ -168,13 +91,6 @@ on property:vendor.usb.controller=*
 on charger
     setprop vendor.usb.controller 4e00000.dwc3
     setprop sys.usb.configfs 1
-
-#jiangxueqin start mi_thermald
-    start mi_thermald
-    service mi_thermald /system/vendor/bin/mi_thermald
-    class main
-    user root
-    group system
 
 #pd-mapper
 service vendor.pd_mapper /vendor/bin/pd-mapper
@@ -200,11 +116,6 @@ service vendor.mdm_helper /vendor/bin/mdm_helper
     group system wakelock
     disabled
 
-on property:sys.boot.hwc=*
-    setprop ro.boot.hwc ${sys.boot.hwc}
-on property:sys.boot.cpuid=*
-    setprop ro.boot.cpuid ${sys.boot.cpuid}
-
 service vendor.mdm_launcher /vendor/bin/sh /vendor/bin/init.mdm.sh
     class core
     oneshot
@@ -215,49 +126,11 @@ on property:init.svc.vendor.per_mgr=running
 on property:sys.shutdown.requested=*
     stop vendor.per_proxy
 
-# dual bokeh
-on property:vendor.camera.bokeh.disable=1
-    setprop persist.vendor.camera.bokeh.preview 1
-
-on property:vendor.camera.bokeh.disable=0
-    setprop persist.vendor.camera.bokeh.preview 0
-
-
-on boot
-    chown root root /sys/class/huaqin/interface/hw_info/lcm
-    chmod 0666 /sys/class/huaqin/interface/hw_info/lcm
-    chown root root /sys/class/graphics/fb0/msm_fb_wpoint
-    chmod 0666 /sys/class/graphics/fb0/msm_fb_wpoint
-    chown root root /sys/class/graphics/fb0/msm_fb_rpoint
-    chmod 0666 /sys/class/graphics/fb0/msm_fb_rpoint
-    chown root root /sys/class/graphics/fb0/msm_fb_gpoint
-    chmod 0666 /sys/class/graphics/fb0/msm_fb_gpoint
-    chown root root /sys/class/graphics/fb0/msm_fb_bpoint
-    chmod 0666 /sys/class/graphics/fb0/msm_fb_bpoint
-    chown root root /dev/graphics/fb0
-    chmod 0666 /dev/graphics/fb0
-    #add  vibrator access
-    chmod 0777 /sys/bus/platform/devices/soc:aw8622/duration
-    chmod 0777 /sys/bus/platform/devices/soc:aw8622/activate
-    ##led
-    chmod 0777 /sys/class/leds/led:torch_0/brightness
-    chmod 0777 /sys/class/leds/led:switch_0/brightness
-    #add ini
-    chmod 0777 /proc/android_touch/self_test
-    chmod 0777 /vendor/etc/focal/focaltech_mp_fw_huaxing.ini
-    chown system system /vendor/etc/focal/focaltech_mp_fw_huaxing.ini
-    mkdir /data/vendor/focaltech
-    copy /vendor/etc/focal/focaltech_mp_fw_huaxing.ini /data/vendor/focaltech/focaltech_mp_fw_huaxing.ini
-    chown system system /data/vendor/focaltech/focaltech_mp_fw_huaxing.ini
-    chmod 0777 /data/vendor/focaltech/focaltech_mp_fw_huaxing.ini
-    #xiong add
-    chmod 0777 /sys/class/power_supply/battery/input_suspend
-    chmod 0777 /sys/class/power_supply/battery/constant_charge_current_max
-    #add for ignoring modem crash
-    write /sys/bus/msm_subsys/devices/subsys3/restart_level related
-
-    #add for ignoring adsp crash
-    write /sys/bus/msm_subsys/devices/subsys0/restart_level related
+service vendor.cnss_diag /system/vendor/bin/cnss_diag -q -f -t HELIUM
+   class main
+   user system
+   group system wifi inet sdcard_rw media_rw diag
+   oneshot
 
 service dcvs-sh /vendor/bin/init.qti.dcvs.sh
     class late_start
@@ -268,4 +141,3 @@ service dcvs-sh /vendor/bin/init.qti.dcvs.sh
 
 on property:vendor.dcvs.prop=1
    start dcvs-sh
-

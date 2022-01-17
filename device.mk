@@ -142,6 +142,9 @@ PRODUCT_COPY_FILES += $(LOCAL_PATH)/init/fstab.default:$(TARGET_COPY_OUT_RAMDISK
 PRODUCT_PACKAGES += \
     fstab.default \
     init.xiaomi.rc \
+    init.xiaomi.display.rc \
+    init.xiaomi.fingerprint.rc \
+    init.xiaomi.camera.rc \
     init.target.rc \
     init.qcom.dcvs.sh
 

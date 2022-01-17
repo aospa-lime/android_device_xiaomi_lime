@@ -1,0 +1,44 @@
+# Copyright (C) 2022 Paranoid Android
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+on boot
+    mkdir /mnt/vendor/persist/camera 0777 system camera
+    mkdir /data/vendor/camera/model 0777 system camera
+    mkdir /data/vendor/camera/model/rt_model 0777 system camera
+    mkdir /data/vendor/camera/model/rt_model/mask 0777 system camera
+    mkdir /data/vendor/camera/model/rt_model/score 0777 system camera
+    mkdir /data/vendor/camera/model/bokeh_model 0777 system camera
+    copy /vendor/etc/camera/model/rt_model/cache_data /data/vendor/camera/model/rt_model/cache_data
+    chmod 0777 /data/vendor/camera/model/rt_model/cache_data
+    copy /vendor/etc/camera/model/rt_model/model_mdl_cache /data/vendor/camera/model/rt_model/model_mdl_cache
+    chmod 0777 /data/vendor/camera/model/rt_model/model_mdl_cache
+    copy /vendor/etc/camera/model/rt_model/segment_model /data/vendor/camera/model/rt_model/segment_model
+    chmod 0777 /data/vendor/camera/model/rt_model/segment_model
+    copy /vendor/etc/camera/model/bokeh_model/cache_data /data/vendor/camera/model/bokeh_model/cache_data
+    chmod 0777 /data/vendor/camera/model/bokeh_model/cache_data
+    copy /vendor/etc/camera/model/bokeh_model/model_mdl_cache /data/vendor/camera/model/bokeh_model/model_mdl_cache
+    chmod 0777 /data/vendor/camera/model/bokeh_model/model_mdl_cache
+    copy /vendor/etc/camera/model/bokeh_model/segment_model /data/vendor/camera/model/bokeh_model/segment_model
+    chmod 0777 /data/vendor/camera/model/bokeh_model/segment_model
+    chmod 0777 /vendor/etc/camera/com.xiaomi.dcal.wd.golden
+    chmod 0777 /data/vendor/camera/rear_dc_cal_wd.bin
+    chmod 0777 /mnt/vendor/persist/camera/rear_dc_cal_wd.bin
+    chmod 0777 /mnt/vendor/persist/camera/mi_calib_2k_output.bin
+
+# dual bokeh
+on property:vendor.camera.bokeh.disable=1
+    setprop persist.vendor.camera.bokeh.preview 1
+
+on property:vendor.camera.bokeh.disable=0
+    setprop persist.vendor.camera.bokeh.preview 0

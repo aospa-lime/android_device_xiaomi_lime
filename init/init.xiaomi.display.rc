@@ -1,0 +1,57 @@
+# Copyright (C) 2022 Paranoid Android
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+on boot
+    # display
+    chmod 0666 /sys/devices/platform/soc/5e00000.qcom,mdss_mdp/backlight/panel0-backlight/brightness
+    chmod 0666 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dsi_display_cabc
+    chmod 0666 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dsi_display_cabc_still
+    chmod 0666 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dsi_display_cabc_movie
+
+    chown root root /sys/class/huaqin/interface/hw_info/lcm
+    chmod 0666 /sys/class/huaqin/interface/hw_info/lcm
+    chown root root /sys/class/graphics/fb0/msm_fb_wpoint
+    chmod 0666 /sys/class/graphics/fb0/msm_fb_wpoint
+    chown root root /sys/class/graphics/fb0/msm_fb_rpoint
+    chmod 0666 /sys/class/graphics/fb0/msm_fb_rpoint
+    chown root root /sys/class/graphics/fb0/msm_fb_gpoint
+    chmod 0666 /sys/class/graphics/fb0/msm_fb_gpoint
+    chown root root /sys/class/graphics/fb0/msm_fb_bpoint
+    chmod 0666 /sys/class/graphics/fb0/msm_fb_bpoint
+    chown root root /dev/graphics/fb0
+    chmod 0666 /dev/graphics/fb0
+
+    # Add for vibrator
+    chmod 0777 /sys/bus/platform/devices/soc:aw8622/duration
+    chmod 0777 /sys/bus/platform/devices/soc:aw8622/activate
+
+    # Add for LED
+    chmod 0777 /sys/class/leds/led:torch_0/brightness
+    chmod 0777 /sys/class/leds/led:switch_0/brightness
+
+    chmod 0777 /proc/android_touch/self_test
+    chmod 0777 /vendor/etc/focal/focaltech_mp_fw_huaxing.ini
+    chown system system /vendor/etc/focal/focaltech_mp_fw_huaxing.ini
+    mkdir /data/vendor/focaltech
+    copy /vendor/etc/focal/focaltech_mp_fw_huaxing.ini /data/vendor/focaltech/focaltech_mp_fw_huaxing.ini
+    chown system system /data/vendor/focaltech/focaltech_mp_fw_huaxing.ini
+    chmod 0777 /data/vendor/focaltech/focaltech_mp_fw_huaxing.ini
+    chmod 0777 /sys/class/power_supply/battery/input_suspend
+    chmod 0777 /sys/class/power_supply/battery/constant_charge_current_max
+
+    # Ignore modem crashes
+    write /sys/bus/msm_subsys/devices/subsys3/restart_level related
+
+    # Ignore ADSP crashes
+    write /sys/bus/msm_subsys/devices/subsys0/restart_level related

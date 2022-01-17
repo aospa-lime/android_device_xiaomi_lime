@@ -639,8 +639,8 @@ vendor/lib64/libwapi_cert.so|b76a000029e075efee9538af9cd224a2b3cdbd9f
 vendor/lib64/libxmi_high_dynamic_range.so|76dd49f6031ddc7d2cd2fc3475787ff0d1b63b79
 vendor/lib64/libxml2_vendor.so|336de129dd9072f31d8aaee3286e5f10c1bf32fe
 
-# Camera - from QSSI12/kona
-vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so|531e73fb8e0a0121d681c83899ec8592f9d94ef1
+# Camera - from LA.UM.9.14.r1-18600.02-LAHAINA.QSSI12.0
+vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so|afeca01f1fc2619ddf1aada01d42735ab9efa682
 
 # Camera-configs - MIUI
 vendor/etc/camera/CFR_para_W108_V01.bin|6b3081a2f73b76a05349ffdb925332fc4ac6c3a8
